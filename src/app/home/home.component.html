@@ -1,0 +1,20 @@
+<div>
+  <section class="productPage">
+    <h1>Products</h1>
+
+    <div class="container" >
+
+      <div *ngFor="let item of products?.products">
+          <div class="product" >
+            <img src="{{item.imagePath}}" alt="" />
+            <h3>{{item.name}}</h3>
+            <p>{{item.price | currency:'INR'}}</p>
+            <button (click)="addToCart(item.id,cusIdobj)">
+              Add To Cart
+            </button>
+          </div>
+          
+        </div>
+    </div>
+  </section>
+</div>

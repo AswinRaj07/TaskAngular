@@ -1,0 +1,56 @@
+
+$accent-color: #2ecc71;
+$background-color: #ecf0f1;
+$form-background: #fff;
+$form-width: 300px;
+$form-padding: 20px;
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+
+  .login-form {
+    background-color: $form-background;
+    width: $form-width;
+    padding: $form-padding;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      text-align: center;
+      color: #213547;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+      color: #213547;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid ;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #213547;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $accent-color;
+      }
+    }
+  }
+}

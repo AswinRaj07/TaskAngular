@@ -1,0 +1,23 @@
+<div>
+  <section class="productPage">
+    <h1>Admi Page Products</h1>
+    <div >
+      <button class="addbutton" [routerLink]="'/addproduct/'">AddProduct</button>
+    </div>
+
+    <div class="container">
+
+       <div *ngFor="let item of products?.products">
+          <div class="product" >
+            <img src="{{item.imagePath}}" alt="" />
+            <h3>{{item.name}}</h3>
+            <p>{{item.price | currency:'INR'}}</p>
+            <button (click)="onRemove(item.id)">
+             Remove
+            </button>
+           <button [routerLink]="'/editproduct/' + item.id">Edit</button>
+          </div>
+        </div>
+    </div>
+  </section>
+</div>

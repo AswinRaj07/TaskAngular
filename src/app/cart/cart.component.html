@@ -1,0 +1,24 @@
+
+
+    <div *ngFor="let item of product" class="cart-item">
+
+      <img [src]="item.imagePath" alt="{{ product.name }}" class="product-image" />
+      <div class="product-details">
+        <h5>{{ item.name }}</h5>
+        <p>Price: {{ item.price |currency:'INR' }}</p>
+      </div>
+      <div class="quantity-control">
+        <button (click)="deg(item)">-</button>
+        <span>{{ item.count }}</span>
+        <button (click)="increment(item)">+</button>
+      </div>
+      <button class="remove-button" (click)="onRemove(item.id)">Remove</button>
+
+    </div>
+    <div class="total-div">
+      <p class="total-label">Total:</p>
+      <p class="total-amount">{{ calculateTotalPrice() | currency:'INR' }}</p>
+    </div>
+
+
+

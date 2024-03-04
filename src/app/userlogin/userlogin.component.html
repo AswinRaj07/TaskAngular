@@ -1,0 +1,14 @@
+
+<div class="login-container">
+  <form class="login-form">
+    <h2>Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="email" name="email" placeholder="Enter your username" [(ngModel)]="logObj.email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" [(ngModel)]="logObj.password" required>
+
+    <button type="button" (click)="onLogin()">Login</button>
+    <!-- <a routerLink="register" class="atag">New to here? Registor Now</a> -->
+  </form>
+</div>
